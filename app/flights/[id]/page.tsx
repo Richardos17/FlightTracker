@@ -4,6 +4,8 @@ import { supabase } from '@/lib/supabase/client';
 import PriceChart from '@/components/PriceChart';
 import PricePrediction from '@/components/PricePrediction';
 
+export const dynamic = 'force-dynamic';
+
 interface PriceRecord {
   id: string;
   fetched_at: string;
