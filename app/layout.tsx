@@ -36,7 +36,7 @@ export default function RootLayout({
         </header>
         <main className="flex-1 max-w-5xl mx-auto w-full px-4 py-8">{children}</main>
         <footer className="text-center text-xs text-slate-400 py-6 border-t border-slate-100">
-          Prices checked twice daily via Amadeus API
+          Prices checked twice daily via Google Flights & Kiwi
         </footer>
       </body>
     </html>

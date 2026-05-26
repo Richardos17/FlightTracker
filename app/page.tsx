@@ -84,7 +84,7 @@ export default async function DashboardPage() {
     <div>
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-slate-900">Tracked Flights</h1>
+          <h1 className="text-2xl font-bold text-black">Tracked Flights</h1>
           <p className="text-sm text-slate-500 mt-0.5">
             {flights.length} flight{flights.length !== 1 ? 's' : ''} &middot; updated twice daily
           </p>

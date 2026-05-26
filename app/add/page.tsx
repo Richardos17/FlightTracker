@@ -4,7 +4,7 @@ export default function AddFlightPage() {
   return (
     <div className="max-w-xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-slate-900">Track a new flight</h1>
+        <h1 className="text-2xl font-bold text-black">Track a new flight</h1>
         <p className="text-slate-500 mt-1 text-sm">
           We will check the cheapest available price twice daily and show you how it changes over time.
         </p>
