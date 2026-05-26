@@ -142,7 +142,7 @@ export default function AddFlightForm() {
             }}
             min={new Date().toISOString().split('T')[0]}
             required
-            className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
           />
         </div>
         {tripType === 'roundtrip' ? (
@@ -157,7 +157,7 @@ export default function AddFlightForm() {
               onChange={(e) => setReturnDate(e.target.value)}
               min={departureDate ? departureDate : new Date().toISOString().split('T')[0]}
               required
-              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
             />
           </div>
         ) : (
@@ -169,7 +169,7 @@ export default function AddFlightForm() {
               id="cabin"
               value={cabinClass}
               onChange={(e) => setCabinClass(e.target.value)}
-              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white"
+              className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white"
             >
               {CABIN_CLASSES.map((c) => (
                 <option key={c.value} value={c.value}>
@@ -190,7 +190,7 @@ export default function AddFlightForm() {
             id="cabin-rt"
             value={cabinClass}
             onChange={(e) => setCabinClass(e.target.value)}
-            className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white"
+            className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-white"
           >
             {CABIN_CLASSES.map((c) => (
               <option key={c.value} value={c.value}>
@@ -212,7 +212,7 @@ export default function AddFlightForm() {
           onChange={(e) => setLabel(e.target.value)}
           placeholder="e.g. Summer vacation, Work trip..."
           maxLength={255}
-          className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
         />
       </div>
 

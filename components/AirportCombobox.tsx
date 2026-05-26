@@ -65,7 +65,7 @@ export default function AirportCombobox({ value, onChange, placeholder, id }: Pr
         onChange={(e) => setQuery(e.target.value)}
         placeholder={placeholder}
         autoComplete="off"
-        className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
       />
       {loading && (
         <div className="absolute right-3 top-2.5 text-slate-400 text-xs">Searching...</div>
