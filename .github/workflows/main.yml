@@ -1,0 +1,13 @@
+# .github/workflows/fetch-prices.yml
+name: Fetch flight prices
+on:
+  schedule:
+    - cron: '0 13,19 * * *' 
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -X POST https://flight-tracker-seven-pi/api/cron/fetch-prices \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}"
