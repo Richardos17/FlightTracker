@@ -29,17 +29,14 @@ async function getFlightsWithPrices(): Promise<Flight[]> {
 
   return Promise.all(
     flights.map(async (flight) => {
-      // Fetch last 4 records (2 sources × up to 2 recent checks) and take the cheapest
-      const { data: recent } = await supabase
+      // Get the single most recent price record
+      const { data: latest } = await supabase
         .from('price_history')
         .select('price, currency, fetched_at, carrier, source')
         .eq('tracked_flight_id', flight.id)
         .order('fetched_at', { ascending: false })
-        .limit(4);
-
-      const latest = recent && recent.length > 0
-        ? recent.reduce((min, p) => p.price < min.price ? p : min)
-        : null;
+        .limit(1)
+        .maybeSingle();
 
       const { data: sparkData } = await supabase
         .from('price_history')
